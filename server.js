@@ -6,6 +6,11 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+function findById(id, animalsArray) {
+    const result = animalsArray.filter(animal => animal.id === id)[0];
+    return result;
+  }
+
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
     // Note that we save the animalsArray as filteredResults here:
@@ -45,12 +50,13 @@ function filterByQuery(query, animalsArray) {
     return filteredResults;
 }
 
-app.get('/api/animals', (req, res) => {
-    let results = animals;
-    if (req.query) {
-      results = filterByQuery(req.query, results);
+app.get('/api/animals/:id', (req, res) => {
+    const result = findById(req.params.id, animals);
+    if (result) {
+      res.json(result);
+    } else {
+      res.send(404);
     }
-    res.json(results);
 });
 
 app.listen(PORT, () => {
