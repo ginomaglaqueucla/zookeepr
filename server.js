@@ -62,3 +62,9 @@ app.get('/api/animals/:id', (req, res) => {
 app.listen(PORT, () => {
     console.log(`API server now on port 3001!`);
 });
+
+app.post('/api/animals', (req, res) => {
+  // req.body is where our incoming content will be
+  console.log(req.body);
+  res.json(req.body);
+});
