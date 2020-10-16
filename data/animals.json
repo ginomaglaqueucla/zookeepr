@@ -135,6 +135,34 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Gino",
+      "species": "Human",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Kelsey",
+      "species": "Human",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "anxious"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Gino",
+      "species": "H",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "16"
     }
   ]
 }
